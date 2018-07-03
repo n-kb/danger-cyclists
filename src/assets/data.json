@@ -1,0 +1,52 @@
+[
+  {
+    "year": 2012,
+    "city": "Berlin",
+    "share_cycle": 10.8,
+    "pop": 3326002,
+    "daily_rides": 359208.216,
+    "light_injuries": 5025,
+    "severe_injuries": 684,
+    "deaths": 15
+  },
+  {
+    "year": 2011,
+    "city": "London",
+    "share_cycle": 4.3,
+    "pop": 8173941,
+    "daily_rides": 351479.463,
+    "light_injuries": "",
+    "severe_injuries": 555,
+    "deaths": 16
+  },
+  {
+    "year": 2011,
+    "city": "Paris",
+    "share_cycle": 3.12,
+    "pop": 2249977,
+    "daily_rides": 70199.2824,
+    "light_injuries": 695,
+    "severe_injuries": 49,
+    "deaths": 0
+  },
+  {
+    "year": 2016,
+    "city": "Helsinki",
+    "share_cycle": 17,
+    "pop": 628208,
+    "daily_rides": 106795.36,
+    "light_injuries": 97,
+    "severe_injuries": 3,
+    "deaths": 0
+  },
+  {
+    "year": 2011,
+    "city": "Barcelona",
+    "share_cycle": 1.72,
+    "pop": 1611013,
+    "daily_rides": 27709.4236,
+    "light_injuries": 570,
+    "severe_injuries": 10,
+    "deaths": 2
+  }
+]
