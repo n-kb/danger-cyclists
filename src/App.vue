@@ -107,7 +107,7 @@ export default {
     }
   },
   created () {
-    axios.get("src/assets/data.json").then(response => {
+    axios.get("https://raw.githubusercontent.com/n-kb/danger-cyclists/master/src/assets/data.json").then(response => {
           this.city_data = response.data;
         });
   },

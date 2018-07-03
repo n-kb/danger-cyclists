@@ -35,7 +35,7 @@
         "translate(" + margin.left + "," + margin.top + ")");
 
       var self = this;
-      d3.json("src/assets/data.json").then(function(data) {
+      d3.json("https://raw.githubusercontent.com/n-kb/danger-cyclists/master/src/assets/data.json").then(function(data) {
 
         var legend = ""
 
