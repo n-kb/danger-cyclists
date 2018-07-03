@@ -1,6 +1,12 @@
-# cycle-deaths
+# Europe's most dangerous city for cyclists
 
-> Death rate of cyclists
+A story about cycling and dying in five European cities.
+
+http://blog.nkb.fr/danger-cyclists/
+
+## Data
+
+The data, including its sources and the analyses performed on it is available in the /data folder of this repository.
 
 ## Build Setup
 

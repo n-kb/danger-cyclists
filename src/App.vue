@@ -5,7 +5,7 @@
         <div class="column is-half">
           <h1 class="title is-1 has-text-centered">Europe's most dangerous city for cyclists</h1>
           <p class="byline has-text-centered">
-            A story by <strong>Nicolas Kayser-Bril</strong> &emsp; 3 July 2018.
+            A story by <strong><a href="http://nkb.fr" class="byline--link">Nicolas Kayser-Bril</a></strong> &emsp; 3 July 2018.
           </p>
           <p>
             Cycling in the city is dangerous. But some European cities are more dangerous than others.
@@ -30,7 +30,7 @@
           <div v-if="city_has_been_chosen">
             <d3app viz_type="per_ride" :chosen_city="chosen_city.name" ></d3app>
             <p v-if="correctGuess"> 
-              You selected <span class="city Berlin">Berlin</span> and you were right. In 2012, <span class="city Berlin">699</span> cyclists were killed or severely injured in the city. Considering that there were about <span class="city Berlin">360,000</span> daily rides, this adds up to <span class="city Berlin">5.4</span> fatalities for every million rides, a much higher number than in Paris or Barcelona.
+              You selected <span class="city Berlin">Berlin</span> and you were right. In 2012, <span class="city Berlin">699</span> cyclists were killed or severely injured in the city. Considering that there were about <span class="city Berlin">360,000</span> daily rides, this adds up to <span class="city Berlin">5.4</span> fatalities for every million rides, a much higher number than in Paris or Barcelona. Using the same metrics, less than one in a million car rides in Berlin ended in a car driver or passenger being dead or seriously injured. 
             </p>
             <p v-else> 
               You selected <span :class="chosen_city.name" class="city">{{chosen_city.name}}</span>, but the most dangerous city was <span class="city Berlin">Berlin</span>. In {{ chosen_city.name }}, <span :class="chosen_city.name" class="city">{{ chosen_city.severe_injuries + chosen_city.deaths }}</span> cyclists were killed or severely injured in {{ chosen_city.year }}, against <span class="city Berlin">699</span> in Berlin (in 2012). There were about <span :class="chosen_city.name" class="city">{{ chosen_city.daily_rides.toLocaleString('en') }}</span> daily bicyle rides in {{ chosen_city.name }} against <span class="city Berlin">360,000</span> in Berlin. This adds up to <span :class="chosen_city.name" class="city">{{ chosen_city.ksi_per_m }}</span> fatalities per million rides in {{ chosen_city.name }} against <span class="city Berlin">5.4</span> in Berlin.
@@ -38,9 +38,21 @@
             <p>
               When light injuries are taken into account, <span class="city Barcelona">Barcelona</span> becomes more dangerous, with <span class="city Barcelona">57</span> light injuries per million bicycle rides against <span class="city Berlin">39</span> for Berlin. <span class="city Paris">Paris</span> has <span class="city Paris">27</span> light injuries per million rides and <span class="city Helsinki">Helsinki</span> only <span class="city Helsinki">2</span>. I could not find a reliable figure for light injuries in <span class="city London">London</span>. 
             </p>
+            <p>
+               Using the same metrics, less than one in a million car rides in Berlin ended in a car driver or passenger being dead or seriously injured.
+            </p>
+            <p>
+              The reason why Berlin and London are so much more dangerous than Paris or Barcelona is probably due to higher vehicle speeds. Most severe injuries and deaths occur when cars and lorries make a right turn into a cyclist. Higher speeds reduce reaction times and increase the probability of a cyclist's being run over. However, no data on vehicle speed exist that would let me test this hypothesis.
+            </p>
+            <p>
+              Bike lanes appear to have no key influence on the dangers car drivers pose to cyclists. In 2011, <span class="city Barcelona">Barcelona</span> had a paltry <span class="city Barcelona">180 kilometers</span> of dedicated bike lanes <a href="http://appsso.eurostat.ec.europa.eu/nui/show.do?query=BOOKMARK_DS-355369_QID_-60BE9D5F_UID_-3F171EB0&layout=TIME,C,X,0;CITIES,L,Y,0;INDIC_UR,L,Z,0;INDICATORS,C,Z,1;&zSelection=DS-355369INDIC_UR,TT1079V;DS-355369INDICATORS,OBS_FLAG;&rankName1=INDIC-UR_1_2_-1_2&rankName2=INDICATORS_1_2_-1_2&rankName3=TIME_1_0_0_0&rankName4=CITIES_1_2_0_1&sortC=ASC_-1_FIRST&rStp=&cStp=&rDCh=&cDCh=&rDM=true&cDM=true&footnes=false&empty=false&wai=false&time_mode=NONE&time_most_recent=false&lang=EN&cfo=%23%23%23%2C%23%23%23.%23%23%23">compared</a> to <span class="city Berlin">Berlin</span>'s <span class="city Berlin">1,500 km</span>. <span class="city Helsinki">Helsinki</span>, a city one-quarter of the size of Berlin by area, had <span class="city Helsinki">2,200 km</span>.
+            </p>
+            <p>
+              The key to safer cities for cyclists lies in a joint commitment by local authorities, including politicians and police, to enforce current regulations on speed limits and invest in dedicated infrastructure for cyclists. On June 28, Berlin <a href="https://adfc-berlin.de/radverkehr/571-dank-der-fahrrad-community-berlin-bekommt-deutschlands-erstes-mobilitaetsgesetz.html">passed a law</a> containing a series of measures aimed at fostering cycling. Time will tell if it succeeds in bringing down the number of cyclists killed or maimed on our streets. 
+            </p>
             <h2>Data quality</h2>
             <p>
-              Data on cycling is rarely collected by authorities. Only one survey, the Urban Audit of Eurostat, offers comparable data on bicycle usage in Europe at the city level. Most member states do not bother to keep it up-to-date, which is why the data for all cities but Helsinki is over five-year-old. However, there is no reason to think that the order of magnitude of the metrics presented above changed recently.
+              Data on cycling is rife with methodological issues. Cyclists can commute into a city from a neighboring one. They might choose to cycle one day and use public transportation the next, especially if rain is involved. Only one survey, the Urban Audit of Eurostat, offers comparable data on bicycle usage in Europe at the city level. Most member states do not bother to keep it up-to-date, which is why the data for all cities but Helsinki is over five-year-old. However, there is no reason to think that the order of magnitude of the metrics presented above changed recently.
             </p>
             <p>
               Data on injuries also varies by city. The data from Paris, for instance, comes from police reports, while the data from Helsinki comes from hospitals. In case of deaths, hospitals consider that a patient deceased within 30 days of the accident was killed in traffic, whereas police reports only deal with the immediate consequences of a crash. 
@@ -49,7 +61,7 @@
               This does not make Berlin look any better, as Berlin's is police data. For the Berlin police, a serious injury means that the victim spent at least 24 hours in the hospital after the crash. In Paris, a serious injury is any injury that requires hospital treatment. If anything, the numbers above probably underestimate the dangerousness of cycling in Berlin.
             </p>
             <h2>The data</h2>
-            <p>I used the share of the population cycling to work as a proxy to obtain the number of daily rides. While not everyone goes to work, children, unemployed and retired people also need to move through the city ; I assumed they did so using means of transportation similar to the workers'.</p>
+            <p>I used the share of the population cycling to work as a proxy to obtain the number of daily rides. While not everyone goes to work, children, unemployed and retired people also need to move through the city ; I assumed they did so using means of transportation similar to the workers'. You will find the detailed data and sources on the <a href="https://github.com/n-kb/danger-cyclists">Github repository</a> for this piece.</p>
             <table class="table">
               <tr><td>City</td><td>Year</td><td>Share of the population cycling to work</td><td>Population for given year</td><td>Light injuries</td><td>Severe injuries</td><td>Deaths</td></tr>
               <tr><td>Berlin</td><td>2012</td><td>10.8</td><td>3326002</td><td>5025</td><td>684</td><td>15</td></tr>
@@ -159,4 +171,7 @@ p
 
 .footer
   background-color: #fff
+
+.byline--link
+  color: black
 </style>
