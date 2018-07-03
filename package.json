@@ -3,7 +3,7 @@
   "description": "Death rate of cyclists",
   "version": "1.0.0",
   "author": "Nicolas Kayser-Bril <hi@nkb.fr>",
-  "homepage": "git@github.com:n-kb/danger-cyclists.git",
+  "homepage": "git@github.com:n-kb/danger-cyclists",
   "license": "MIT",
   "private": true,
   "scripts": {
