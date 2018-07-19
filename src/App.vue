@@ -31,6 +31,7 @@
             <a class="button Helsinki btn-choose" @click="choose_city('Helsinki')">Helsinki</a>
           </p>
           <div v-if="city_has_been_chosen">
+            <h2>Killed or seriously injured per million rides</h2>
             <d3app viz_type="per_ride" :chosen_city="chosen_city.name" ></d3app>
             <p v-if="correctGuess"> 
               You selected <span class="city Stuttgart">Stuttgart</span> and you were right. In 2012, <span class="city Stuttgart">88</span> cyclists were killed or severely injured in the city. Considering that there were about <span class="city Stuttgart">27,800</span> daily rides, this adds up to <span class="city Stuttgart">8.8</span> fatalities for every million rides, a much higher number than in Paris or Barcelona.
