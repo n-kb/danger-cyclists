@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :id="viz_type">
+    <div :id="viz_type" class="svg-container">
     </div>
   </div>
 </template>
@@ -17,8 +17,6 @@
     },
     mounted() {
 
-      document.getElementById("selectCity").scrollIntoView({behavior: "smooth"});
-
       var margin = {top: 20, right: 20, bottom: 70, left: 40},
       width = 600 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
@@ -28,8 +26,9 @@
       var y = d3.scaleLinear();
 
       var svg = d3.select("#" + this.viz_type).append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 600 300")
+      .attr("class","svg-content")
       .append("g")
       .attr("transform", 
         "translate(" + margin.left + "," + margin.top + ")");
@@ -94,9 +93,13 @@
             .text(d => d.value + " KSI (" + d.year + ")");
         } else {
           svg.selectAll(".labels")
-            .text(d => d.value + " KSI per m rides");
+            .text(d => d.value + " KSI/m");
         }
       });
+      if (self.viz_type == "per_ride"){
+        //hack to prevent scroll from happening on first one
+        document.getElementById("selectCity").scrollIntoView({behavior: "smooth"});
+      }
     }
   }
 
@@ -104,6 +107,20 @@
 </script>
 
 <style lang="sass">
+
+.svg-container
+  width: 100%
+  position: relative
+  overflow: hidden
+  padding-bottom: 300px;
+  vertical-align: top;
+  overflow: hidden;
+
+.svg-content
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
 
 .labels
   font-family: Arial
@@ -123,6 +140,15 @@
 
 .London
   fill: #EB7260
+
+.Stuttgart
+  fill: #3C3865
+
+.Cologne
+  fill: #386365
+
+.Hamburg
+  fill: #654A47
 
 .chosen
   stroke: #333

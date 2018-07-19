@@ -5,7 +5,7 @@
         <div class="column is-half">
           <h1 class="title is-1 has-text-centered">Europe's most dangerous city for cyclists</h1>
           <p class="byline has-text-centered">
-            A story by <strong><a href="http://nkb.fr" class="byline--link">Nicolas Kayser-Bril</a></strong> &emsp; 3 July 2018.
+            A story by <strong><a href="http://nkb.fr" class="byline--link">Nicolas Kayser-Bril</a></strong> &emsp; 3 July 2018 (updated 19 July)
           </p>
           <p>
             Cycling in the city is dangerous. But some European cities are more dangerous than others.
@@ -21,22 +21,25 @@
             Select the city you think is the most dangerous for cyclists.
           </p>
           <p class="has-text-centered">
-            <a class="button" @click="choose_city('Berlin')">Berlin</a>
-            <a class="button" @click="choose_city('London')">London</a>
-            <a class="button" @click="choose_city('Paris')">Paris</a>
-            <a class="button" @click="choose_city('Barcelona')">Barcelona</a>
-            <a class="button" @click="choose_city('Helsinki')">Helsinki</a>
+            <a class="button Berlin btn-choose" @click="choose_city('Berlin')">Berlin</a>
+            <a class="button London btn-choose" @click="choose_city('London')">London</a>
+            <a class="button Cologne btn-choose" @click="choose_city('Cologne')">Cologne</a>
+            <a class="button Hamburg btn-choose" @click="choose_city('Hamburg')">Hamburg</a>
+            <a class="button Stuttgart btn-choose" @click="choose_city('Stuttgart')">Stuttgart</a>
+            <a class="button Paris btn-choose" @click="choose_city('Paris')">Paris</a>
+            <a class="button Barcelona btn-choose" @click="choose_city('Barcelona')">Barcelona</a>
+            <a class="button Helsinki btn-choose" @click="choose_city('Helsinki')">Helsinki</a>
           </p>
           <div v-if="city_has_been_chosen">
             <d3app viz_type="per_ride" :chosen_city="chosen_city.name" ></d3app>
             <p v-if="correctGuess"> 
-              You selected <span class="city Berlin">Berlin</span> and you were right. In 2012, <span class="city Berlin">699</span> cyclists were killed or severely injured in the city. Considering that there were about <span class="city Berlin">360,000</span> daily rides, this adds up to <span class="city Berlin">5.4</span> fatalities for every million rides, a much higher number than in Paris or Barcelona. Using the same metrics, less than one in a million car rides in Berlin ended in a car driver or passenger being dead or seriously injured. 
+              You selected <span class="city Stuttgart">Stuttgart</span> and you were right. In 2012, <span class="city Stuttgart">88</span> cyclists were killed or severely injured in the city. Considering that there were about <span class="city Stuttgart">27,800</span> daily rides, this adds up to <span class="city Stuttgart">8.8</span> fatalities for every million rides, a much higher number than in Paris or Barcelona.
             </p>
             <p v-else> 
-              You selected <span :class="chosen_city.name" class="city">{{chosen_city.name}}</span>, but the most dangerous city was <span class="city Berlin">Berlin</span>. In {{ chosen_city.name }}, <span :class="chosen_city.name" class="city">{{ chosen_city.severe_injuries + chosen_city.deaths }}</span> cyclists were killed or severely injured in {{ chosen_city.year }}, against <span class="city Berlin">699</span> in Berlin (in 2012). There were about <span :class="chosen_city.name" class="city">{{ chosen_city.daily_rides.toLocaleString('en') }}</span> daily bicyle rides in {{ chosen_city.name }} against <span class="city Berlin">360,000</span> in Berlin. This adds up to <span :class="chosen_city.name" class="city">{{ chosen_city.ksi_per_m }}</span> fatalities per million rides in {{ chosen_city.name }} against <span class="city Berlin">5.4</span> in Berlin.
+              You selected <span :class="chosen_city.name" class="city">{{chosen_city.name}}</span>, but the most dangerous city was <span class="city Stuttgart">Stuttgart</span>. In {{ chosen_city.name }}, <span :class="chosen_city.name" class="city">{{ chosen_city.severe_injuries + chosen_city.deaths }}</span> cyclists were killed or severely injured in {{ chosen_city.year }}, against <span class="city Stuttgart">88</span> in Stuttgart (in 2012). There were about <span :class="chosen_city.name" class="city">{{ chosen_city.daily_rides.toLocaleString('en') }}</span> daily bicyle rides in {{ chosen_city.name }} against <span class="city Stuttgart">27,800</span> in Stuttgart. This adds up to <span :class="chosen_city.name" class="city">{{ chosen_city.ksi_per_m }}</span> fatalities per million rides in {{ chosen_city.name }} against <span class="city Stuttgart">8.8</span> in Stuttgart.
             </p>
             <p>
-              When light injuries are taken into account, <span class="city Barcelona">Barcelona</span> becomes more dangerous, with <span class="city Barcelona">57</span> light injuries per million bicycle rides against <span class="city Berlin">39</span> for Berlin. <span class="city Paris">Paris</span> has <span class="city Paris">27</span> light injuries per million rides and <span class="city Helsinki">Helsinki</span> only <span class="city Helsinki">2</span>. I could not find a reliable figure for light injuries in <span class="city London">London</span>. 
+              When light injuries are taken into account, <span class="city Barcelona">Barcelona</span> becomes more dangerous, with <span class="city Barcelona">57</span> light injuries per million bicycle rides against <span class="city Berlin">39</span> for Berlin. <span class="city Paris">Paris</span> has <span class="city Paris">27</span> light injuries per million rides and <span class="city Helsinki">Helsinki</span> only <span class="city Helsinki">2</span>. I could not find a reliable figure for light injuries in <span class="city London">London</span> or <span class="city Stuttgart">Stuttgart</span>. 
             </p>
             <p>
                Using the same metrics, less than one in a million car rides in Berlin ended in a car driver or passenger being dead or seriously injured.
@@ -69,6 +72,9 @@
               <tr><td>Paris</td><td>2011</td><td>3.12</td><td>2249977</td><td>695</td><td>49</td><td>0</td></tr>
               <tr><td>Helsinki</td><td>2016</td><td>17</td><td>628208</td><td>97</td><td>3</td><td>0</td></tr>
               <tr><td>Barcelona</td><td>2011</td><td>1.72</td><td>1611013</td><td>570</td><td>10</td><td>2</td></tr>
+              <tr><td>Hamburg</td><td>2012</td><td>8.7</td><td>1718187</td><td>2000</td><td>200</td><td>4</td></tr>
+              <tr><td>Cologne/Lev.</td><td>2012</td><td>11.0</td><td>1173038</td><td>1578</td><td>216</td><td>5</td></tr>
+              <tr><td>Stuttgart</td><td>2012</td><td>4.7</td><td>591015</td><td></td><td>10</td><td>2</td></tr>
             </table>
           </div>
         </div>
@@ -99,7 +105,7 @@ export default {
   methods: {
     choose_city(city) {
       this.city_has_been_chosen = true;
-      this.correctGuess = (city == 'Berlin') ? true : false;
+      this.correctGuess = (city == 'Stuttgart') ? true : false;
       var self = this;
       this.city_data.forEach(function(d){
         if (d.city == city) {
@@ -154,6 +160,9 @@ p
 .city
   border-bottom: 4px solid
 
+.btn-choose
+  margin: .3em
+
 .Berlin
   border-color: rgba(#354458,.7)
 
@@ -168,6 +177,15 @@ p
 
 .London
   border-color: rgba(#EB7260,.7)
+
+.Stuttgart
+  border-color: rgba(#3C3865, .7)
+
+.Cologne
+  border-color: rgba(#386365, .7)
+
+.Hamburg
+  border-color: rgba(#654A47, .7)
 
 .footer
   background-color: #fff

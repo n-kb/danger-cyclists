@@ -10,6 +10,36 @@
     "deaths": 15
   },
   {
+    "year": 2012,
+    "city": "Stuttgart",
+    "share_cycle": 4.7,
+    "pop": 591015,
+    "daily_rides": 27777.705,
+    "light_injuries": "",
+    "severe_injuries": 86,
+    "deaths": 2
+  },
+  {
+    "year": 2012,
+    "city": "Hamburg",
+    "share_cycle": 8.7,
+    "pop": 1718187,
+    "daily_rides": 149482.269,
+    "light_injuries": 2000,
+    "severe_injuries": 200,
+    "deaths": 4
+  },
+  {
+    "year": 2012,
+    "city": "Cologne",
+    "share_cycle": 11,
+    "pop": 1173038,
+    "daily_rides": 128772.861,
+    "light_injuries": 1578,
+    "severe_injuries": 216,
+    "deaths": 5
+  },
+  {
     "year": 2011,
     "city": "London",
     "share_cycle": 4.3,
