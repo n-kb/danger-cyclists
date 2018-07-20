@@ -75,7 +75,7 @@
               <tr><td>Barcelona</td><td>2011</td><td>1.72</td><td>1611013</td><td>570</td><td>10</td><td>2</td></tr>
               <tr><td>Hamburg</td><td>2012</td><td>8.7</td><td>1718187</td><td>2000</td><td>200</td><td>4</td></tr>
               <tr><td>Cologne/Lev.</td><td>2012</td><td>11.0</td><td>1173038</td><td>1578</td><td>216</td><td>5</td></tr>
-              <tr><td>Stuttgart</td><td>2012</td><td>4.7</td><td>591015</td><td></td><td>10</td><td>2</td></tr>
+              <tr><td>Stuttgart</td><td>2012</td><td>4.7</td><td>591015</td><td></td><td>86</td><td>2</td></tr>
             </table>
           </div>
         </div>
