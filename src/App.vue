@@ -11,7 +11,7 @@
             Cycling in the city is dangerous. But some European cities are more dangerous than others.
           </p>
           <p>
-            The chart below shows the number of cyclists <strong>killed or seriously injured</strong> (KSI) in traffic in five large European cities.
+            The chart below shows the number of cyclists <strong>killed or seriously injured</strong> (KSI) in traffic in eight large European cities.
           </p>
           <d3app viz_type="KSI"></d3app>
           <p>
