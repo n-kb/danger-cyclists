@@ -13,7 +13,7 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bulma": "^0.7.1",
     "d3": "^5.5.0",
     "vue": "^2.5.11"
