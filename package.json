@@ -15,7 +15,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
-    "d3": "^5.5.0",
+    "d3": "^7.6.1",
     "vue": "^2.5.11"
   },
   "browserslist": [
